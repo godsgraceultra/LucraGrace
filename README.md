@@ -19,5 +19,3 @@ LucraGrace is a web-based profit margin and pricing calculator designed for ecom
 ## Demo
 [https://calculator.godsgraceultra.com](https://calculator.godsgraceultra.com)
 
-## License
-This project is licensed under the MIT License.
