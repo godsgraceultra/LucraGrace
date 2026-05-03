@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -354,6 +354,22 @@
                     </button>
                 </div>
                 <div id="copyFeedback" class="text-center mt-3 text-white/60 text-xs opacity-0 pointer-events-none"></div>
+                
+                <!-- Email Capture Section -->
+                <div class="mt-6 pt-4 border-t border-white/20">
+                    <p class="text-white/60 text-[10px] uppercase tracking-wider mb-3 text-center">
+                        Get profit insights & early access to clarity
+                    </p>
+                    <div class="flex gap-2">
+                        <input type="email" id="captureEmail" placeholder="Your email address" 
+                               class="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white text-sm placeholder-white/40 focus:outline-none focus:border-[#ffd800]">
+                        <button id="captureBtn" 
+                                class="bg-[#ffd800] text-[#070b56] px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition-all">
+                            Subscribe
+                        </button>
+                    </div>
+                    <div id="captureFeedback" class="text-center mt-2 text-xs opacity-0 transition-opacity"></div>
+                </div>
             </div>
 
             <!-- UltraGrace Card -->
@@ -368,7 +384,7 @@
                     </div>
                 </div>
                 <p class="text-white text-sm leading-relaxed">
-                    Real-time P&L, ROAS, CAC, runway, and AI-driven insights for your business.
+                    Clarity for your store. Control for your growth. Unify Shopify, QuickBooks, and ad platforms into one source of truth. Get AI-powered insights that tell you exactly what to do next.
                 </p>
                 <button id="exploreBtn" class="w-full mt-4 bg-[#ffd800] text-[#070b56] py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all group">
                     Explore UltraGrace
@@ -405,7 +421,13 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        // Supabase configuration (same as your waitlist page)
+        const SUPABASE_URL = 'https://ufioxikrnewoprjuaune.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmaW94aWtybmV3b3ByanVhdW5lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1NDMwODksImV4cCI6MjA4ODExOTA4OX0.tbe7EP8dWesUIXaLPuS3FmcZL1MFNTt4cPkBeIjiqw8';
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        
         // Get slider fill working
         const slider = document.getElementById('marginSlider');
         
@@ -434,6 +456,9 @@
         const exploreBtn = document.getElementById('exploreBtn');
         const consultBtn = document.getElementById('consultBtn');
         const wakeHint = document.getElementById('wakeHint');
+        const captureEmail = document.getElementById('captureEmail');
+        const captureBtn = document.getElementById('captureBtn');
+        const captureFeedback = document.getElementById('captureFeedback');
         
         let isAwakened = false;
         
@@ -556,6 +581,66 @@
             }
         }
         
+        // Email capture to Supabase (same table as waitlist)
+        captureBtn.addEventListener('click', async function() {
+            const email = captureEmail.value.trim();
+            
+            if (!email) {
+                captureFeedback.textContent = 'Please enter your email';
+                captureFeedback.style.color = '#ffd800';
+                captureFeedback.style.opacity = '1';
+                setTimeout(() => { captureFeedback.style.opacity = '0'; }, 2000);
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                captureFeedback.textContent = 'Enter a valid email address';
+                captureFeedback.style.color = '#ffd800';
+                captureFeedback.style.opacity = '1';
+                setTimeout(() => { captureFeedback.style.opacity = '0'; }, 2000);
+                return;
+            }
+            
+            captureBtn.disabled = true;
+            captureBtn.textContent = 'SENDING...';
+            
+            try {
+                const { error } = await _supabase
+                    .from('waitlist_leads')
+                    .insert([{
+                        email: email,
+                        full_name: 'LucraGrace User',
+                        store_url: 'from_lucragrace',
+                        source: 'lucragrace_calculator',
+                        email_confirmed: false,
+                        status: 'pending'
+                    }]);
+                
+                if (error && error.code === '23505') {
+                    captureFeedback.textContent = '✓ Already subscribed! Check your inbox.';
+                    captureFeedback.style.color = '#4ade80';
+                    captureFeedback.style.opacity = '1';
+                    captureEmail.value = '';
+                } else if (error) {
+                    throw new Error(error.message);
+                } else {
+                    captureFeedback.textContent = '✓ Subscribed! Check your inbox for weekly tips.';
+                    captureFeedback.style.color = '#4ade80';
+                    captureFeedback.style.opacity = '1';
+                    captureEmail.value = '';
+                }
+            } catch (err) {
+                console.error('Subscription error:', err);
+                captureFeedback.textContent = '⚠️ Unable to subscribe. Please try again.';
+                captureFeedback.style.color = '#ffd800';
+                captureFeedback.style.opacity = '1';
+            }
+            
+            captureBtn.disabled = false;
+            captureBtn.textContent = 'Subscribe';
+            setTimeout(() => { captureFeedback.style.opacity = '0'; }, 3000);
+        });
+        
         marginSlider.addEventListener('input', function() {
             updateSliderDisplay();
             awaken();
@@ -573,7 +658,7 @@
         copyBtn.addEventListener('click', copyPrice);
         resetBtn.addEventListener('click', resetAll);
         exploreBtn.addEventListener('click', () => window.open('https://waitlist.ultragracehq.com', '_blank'));
-        consultBtn.addEventListener('click', () => window.open('https://godsgraceultra.com', '_blank'));
+        consultBtn.addEventListener('click', () => window.open('https://calendly.com/godsgraceultra', '_blank'));
         
         addUpdateListeners();
         updateSliderDisplay();
