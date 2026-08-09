@@ -1,445 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6SQ5R2EMBK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6SQ5R2EMBK');
-</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LucraGrace – Pricing &amp; Business Health</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LucraGrace - Profit Calculator | Pricing & Margin Tool for Business Owners</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
 
-<!-- Primary SEO Meta Tags -->
-<meta name="title" content="LucraGrace - Profit Calculator | Pricing & Margin Tool for Business Owners">
-<meta name="description" content="Calculate your optimal selling price instantly. Enter your costs, set your profit margin goal, and get your recommended price. Free profit calculator for ecommerce, retail, and small business owners.">
-<meta name="keywords" content="profit calculator, margin calculator, pricing calculator, selling price calculator, product pricing tool, cost calculator, ecommerce pricing tool, business profit margin, profit margin calculator online, calculate optimal selling price, free profit calculator for small business, LucraGrace, UltraGrace pricing tool, GOD'S GRACE ULTRA calculator, ecommerce profit calculator, ROAS calculator, lucragrace">
-<meta name="author" content="GOD'S GRACE ULTRA">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
 
-<!-- Open Graph / Facebook Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://calculator.godsgraceultra.com/">
-<meta property="og:title" content="LucraGrace - Profit Calculator | Free Pricing Tool">
-<meta property="og:description" content="Great things begin where clarity meets action. Enter your costs, set your profit goal, get your price instantly. Free profit margin calculator.">
-<meta property="og:image" content="https://calculator.godsgraceultra.com/images/og-preview.png">
-<meta property="og:site_name" content="LucraGrace">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js">
+    </script>
 
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://calculator.godsgraceultra.com/">
-<meta name="twitter:title" content="LucraGrace - Profit Calculator | Free Pricing Tool">
-<meta name="twitter:description" content="Calculate your optimal selling price. Free profit margin calculator for business owners.">
-<meta name="twitter:image" content="https://calculator.godsgraceultra.com/images/og-preview.png">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://calculator.godsgraceultra.com/">
-
-<!-- Favicon - Using SVG logo icon -->
-<link rel="icon" type="image/svg+xml" href="https://calculator.godsgraceultra.com/images/LucraGrace-icon.svg">
-<link rel="apple-touch-icon" href="https://calculator.godsgraceultra.com/images/LucraGrace-icon.svg">
-
-<!-- Schema.org Structured Data for Local Business / Web Application -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "LucraGrace Profit Calculator",
-  "description": "Free profit margin calculator that helps business owners determine optimal selling prices based on costs and desired profit margins.",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Any",
-  "isAccessibleForFree": true,
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "GOD'S GRACE ULTRA",
-    "url": "https://godsgraceultra.com"
-  },
-  "featureList": "Product cost calculator, shipping cost input, ad spend tracking, transaction fee calculator, profit margin slider, real-time pricing, copy to clipboard",
-  "url": "https://calculator.godsgraceultra.com",
-  "screenshot": "https://calculator.godsgraceultra.com/images/og-preview.png"
-}
-</script>
-
-<!-- BreadcrumbList Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://godsgraceultra.com"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "LucraGrace Calculator",
-      "item": "https://calculator.godsgraceultra.com"
-    }
-  ]
-}
-</script>
-
-<!-- Organization Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "GOD'S GRACE ULTRA",
-  "url": "https://godsgraceultra.com",
-  "logo": "https://calculator.godsgraceultra.com/images/LucraGrace-icon.svg",
-  "sameAs": [
-    "https://instagram.com/godsgraceultra",
-    "https://twitter.com/godsgraceultra",
-    "https://linkedin.com/company/godsgraceultra"
-  ],
-  "brand": {
-    "@type": "Brand",
-    "name": "LucraGrace"
-  }
-}
-</script>
-
-<!-- CSS and Fonts (unchanged) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Manrope', sans-serif;
-        background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 100%);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    input[type="range"] {
-        -webkit-appearance: none;
-        height: 8px;
-        background: linear-gradient(90deg, #ffd800 0%, #ffd800 var(--fill, 50%), #e2e8f0 var(--fill, 50%));
-        border-radius: 10px;
-    }
-    
-    input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: 24px;
-        width: 24px;
-        border-radius: 50%;
-        background: #ffd800;
-        cursor: pointer;
-        border: 3px solid #070b56;
-        box-shadow: 0 4px 12px rgba(7, 11, 86, 0.3);
-        transition: transform 0.1s ease;
-    }
-    
-    input[type="range"]::-webkit-slider-thumb:hover {
-        transform: scale(1.2);
-    }
-    
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        opacity: 0.5;
-    }
-    
-    .glass-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .result-glass {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-    }
-    
-    .result-glass:hover {
-        background: rgba(255, 255, 255, 0.12);
-        transform: translateY(-2px);
-    }
-    
-    .hover-lift {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .hover-lift:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 40px rgba(7, 11, 86, 0.15);
-    }
-    
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.6; }
-    }
-    
-    .animate-pulse-slow {
-        animation: pulse 2s ease-in-out infinite;
-    }
-    
-    @media (min-width: 1280px) {
-        body {
-            font-size: 14px;
+    <style>
+        /* ── Reset & Base ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-</style>
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── Reusable glass cards ── */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .result-glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .result-glass:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(7, 11, 86, 0.15);
+        }
+
+        /* ── Range slider ── */
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 8px;
+            background: linear-gradient(90deg, #ffd800 0%, #ffd800 var(--fill, 50%), #e2e8f0 var(--fill, 50%));
+            border-radius: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffd800;
+            cursor: pointer;
+            border: 3px solid #070b56;
+            box-shadow: 0 4px 12px rgba(7, 11, 86, 0.3);
+            transition: transform 0.1s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        /* ── Number inputs ── */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            opacity: 0.5;
+        }
+
+        /* ── Tool switcher ── */
+        .tool-switcher {
+            display: inline-flex;
+            background: rgba(7, 11, 86, 0.06);
+            border-radius: 40px;
+            padding: 4px;
+            border: 1px solid rgba(7, 11, 86, 0.08);
+        }
+        .tool-switcher button {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.6rem 1.4rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: transparent;
+            color: rgba(7, 11, 86, 0.6);
+            transition: all 0.25s ease;
+            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .tool-switcher button .material-symbols-outlined {
+            font-size: 1.1rem;
+        }
+        .tool-switcher button.active {
+            background: #070b56;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(7, 11, 86, 0.2);
+        }
+        .tool-switcher button:not(.active):hover {
+            color: #070b56;
+            background: rgba(7, 11, 86, 0.04);
+        }
+
+        /* ── View containers ── */
+        .tool-view {
+            display: none;
+        }
+        .tool-view.active {
+            display: block;
+        }
+
+        /* ── Business Health cards ── */
+        .metric-card {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            box-shadow: 0 4px 20px rgba(7, 11, 86, 0.06);
+            border: 1px solid rgba(7, 11, 86, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(7, 11, 86, 0.10);
+        }
+        .metric-card .label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(7, 11, 86, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .metric-card .label .material-symbols-outlined {
+            font-size: 1rem;
+        }
+        .metric-card .value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #070b56;
+            margin-top: 0.25rem;
+            line-height: 1.2;
+        }
+        .metric-card .value.positive {
+            color: #16a34a;
+        }
+        .metric-card .value.negative {
+            color: #dc2626;
+        }
+
+        .metric-card.highlight {
+            background: #070b56;
+            border-color: #070b56;
+        }
+        .metric-card.highlight .label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .metric-card.highlight .value {
+            color: #fff;
+        }
+        .metric-card.highlight .value.positive {
+            color: #4ade80;
+        }
+        .metric-card.highlight .value.negative {
+            color: #f87171;
+        }
+
+        /* ── Chart containers ── */
+        .chart-box {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 1.25rem 1.25rem 0.75rem;
+            box-shadow: 0 4px 20px rgba(7, 11, 86, 0.06);
+            border: 1px solid rgba(7, 11, 86, 0.04);
+        }
+        .chart-box h4 {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(7, 11, 86, 0.5);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .chart-box h4 .material-symbols-outlined {
+            font-size: 1rem;
+        }
+        .chart-box canvas {
+            max-height: 200px;
+            max-width: 100%;
+        }
+
+        /* ── Business Health interpretation ── */
+        .health-interp {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(7, 11, 86, 0.04);
+            box-shadow: 0 4px 20px rgba(7, 11, 86, 0.06);
+        }
+        .health-interp .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .health-interp .badge.healthy {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+        .health-interp .badge.warning {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        .health-interp .badge.danger {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        .health-interp ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 0 0;
+        }
+        .health-interp ul li {
+            font-size: 0.9rem;
+            color: #1e293b;
+            padding: 0.25rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .health-interp ul li .material-symbols-outlined {
+            font-size: 1.1rem;
+            color: #070b56;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        /* ── Responsive tweaks ── */
+        @media (max-width: 768px) {
+            .tool-switcher button {
+                font-size: 0.7rem;
+                padding: 0.4rem 1rem;
+            }
+            .metric-card .value {
+                font-size: 1.4rem;
+            }
+            .chart-box canvas {
+                max-height: 160px;
+            }
+            .tool-switcher button .material-symbols-outlined {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .tool-switcher {
+                flex-wrap: wrap;
+                justify-content: center;
+                border-radius: 20px;
+                padding: 4px;
+                width: 100%;
+            }
+            .tool-switcher button {
+                flex: 1 1 auto;
+                justify-content: center;
+                font-size: 0.65rem;
+                padding: 0.4rem 0.6rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* ── Helpers ── */
+        .text-navy {
+            color: #070b56;
+        }
+        .bg-navy {
+            background: #070b56;
+        }
+        .border-navy {
+            border-color: #070b56;
+        }
+        .text-gold {
+            color: #ffd800;
+        }
+        .bg-gold {
+            background: #ffd800;
+        }
+
+        /* ── Wake hint ── */
+        #wakeHint {
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        #wakeHint.hidden {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* ── Input group with currency prefix ── */
+        .input-group-icon {
+            position: relative;
+        }
+        .input-group-icon .prefix {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 800;
+            color: #070b56;
+            font-size: 1.1rem;
+            pointer-events: none;
+        }
+        .input-group-icon input {
+            padding-left: 2rem;
+        }
+        .input-group-icon .suffix {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: rgba(7, 11, 86, 0.4);
+            pointer-events: none;
+        }
+
+        /* ── ROAS bar ── */
+        .roas-bar-track {
+            height: 8px;
+            border-radius: 10px;
+            background: #e2e8f0;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+        .roas-bar-track .roas-bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ffd800, #f59e0b);
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <nav class="glass-card shadow-sm flex justify-between items-center px-8 py-5 border-b border-gray-100 flex-shrink-0">
+    <!-- ─── HEADER ─── -->
+    <header class="glass-card shadow-sm flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-b border-gray-100 flex-shrink-0">
         <div class="flex items-center gap-3">
             <div>
-                <div class="text-3xl font-black tracking-tighter">
+                <div class="text-2xl md:text-3xl font-black tracking-tighter">
                     <span class="text-[#070b56]">Lucra</span><span class="text-[#ffd800] drop-shadow-sm">Grace</span>
                 </div>
-                <p class="text-sm text-gray-500 mt-1 font-medium">Great things begin where clarity meets action.</p>
-            </div>
-        </div>
-        <div class="hidden md:flex gap-2">
-            <span class="px-3 py-1.5 bg-[#070b56]/5 rounded-full text-[10px] font-bold text-[#070b56] tracking-wide">PROFIT OPTIMIZER</span>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto w-full gap-6 p-6 lg:p-8">
-        
-        <!-- LEFT COLUMN - Inputs -->
-        <div class="lg:w-1/2">
-            <div class="glass-card rounded-3xl p-8 shadow-xl hover-lift">
-                <div class="flex items-center gap-2 mb-6 pb-2 border-b border-gray-100">
-                    <span class="material-symbols-outlined text-[#070b56] text-2xl">edit_note</span>
-                    <h2 class="text-sm font-black text-[#070b56] uppercase tracking-wider">Cost Structure</h2>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div class="group">
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-sm">inventory_2</span>
-                            Product Cost
-                        </label>
-                        <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#070b56] font-black text-lg">$</span>
-                            <input type="number" id="productCost" value="20.00" step="0.01" min="0" class="w-full pl-9 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all group-hover:border-gray-300">
-                        </div>
-                    </div>
-                    
-                    <div class="group">
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-sm">local_shipping</span>
-                            Shipping Cost
-                        </label>
-                        <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#070b56] font-black text-lg">$</span>
-                            <input type="number" id="shippingCost" value="5.00" step="0.01" min="0" class="w-full pl-9 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
-                        </div>
-                    </div>
-                    
-                    <div class="group">
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-sm">ads_click</span>
-                            Ad Spend / Unit
-                        </label>
-                        <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#070b56] font-black text-lg">$</span>
-                            <input type="number" id="adSpend" value="10.00" step="0.01" min="0" class="w-full pl-9 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
-                        </div>
-                    </div>
-                    
-                    <div class="group">
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-sm">credit_card</span>
-                            Transaction Fee
-                        </label>
-                        <div class="flex gap-2">
-                            <div class="relative flex-1">
-                                <input type="number" id="feePercent" value="2.9" step="0.1" min="0" class="w-full px-3 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
-                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-black text-gray-400">%</span>
-                            </div>
-                            <div class="relative w-28">
-                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-[#070b56] font-black">$</span>
-                                <input type="number" id="fixedFee" value="0.30" step="0.01" min="0" class="w-full pl-7 pr-2 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Margin Slider Section -->
-                <div class="mt-8 pt-2">
-                    <div class="flex justify-between items-end mb-3">
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1">
-                            <span class="material-symbols-outlined text-sm">target</span>
-                            Desired Profit Margin
-                        </label>
-                        <div class="flex items-baseline gap-1">
-                            <span id="marginPercent" class="text-3xl font-black text-[#070b56]">40</span>
-                            <span class="text-lg font-bold text-[#070b56]">%</span>
-                        </div>
-                    </div>
-                    <input type="range" id="marginSlider" min="10" max="70" value="40" step="1" class="w-full">
-                    <div class="flex justify-between mt-2 text-[10px] font-black text-gray-400 tracking-wider">
-                        <span>10%</span>
-                        <span>30%</span>
-                        <span>50%</span>
-                        <span>70%</span>
-                    </div>
-                </div>
-
-                <!-- Wake Hint -->
-                <div id="wakeHint" class="mt-6 py-3 rounded-2xl bg-gradient-to-r from-[#ffd800]/10 to-transparent">
-                    <div class="flex items-center justify-center gap-2 text-xs font-bold text-[#070b56]">
-                        <span class="material-symbols-outlined text-base animate-pulse">touch_app</span>
-                        MOVE THE SLIDER TO CALCULATE YOUR PRICE
-                    </div>
-                </div>
+                <p class="text-xs text-gray-500 font-medium hidden sm:block">Great things begin where clarity meets action.</p>
             </div>
         </div>
 
-        <!-- RIGHT COLUMN - Results -->
-        <div class="lg:w-1/2 space-y-5">
-            
-            <!-- Results Card -->
-            <div class="bg-gradient-to-br from-[#070b56] to-[#070b56] rounded-3xl p-6 shadow-2xl">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[#ffd800] text-xl">analytics</span>
-                        <h2 class="text-[10px] font-black tracking-[0.2em] text-[#ffd800]/80 uppercase">Your Results</h2>
+        <!-- Tool Switcher -->
+        <div class="tool-switcher" role="group" aria-label="Tool switcher">
+            <button class="active" data-tool="pricing" aria-pressed="true">
+                <span class="material-symbols-outlined">calculate</span>
+                Pricing Calculator
+            </button>
+            <button data-tool="health" aria-pressed="false">
+                <span class="material-symbols-outlined">monitoring</span>
+                Business Health
+            </button>
+        </div>
+    </header>
+
+    <!-- ─── MAIN ─── -->
+    <main class="flex-1 max-w-7xl mx-auto w-full p-4 md:p-6 lg:p-8">
+
+        <!-- ============================================================ -->
+        <!--  TOOL 1 : PRICING CALCULATOR (empty start + currency)        -->
+        <!-- ============================================================ -->
+        <section id="view-pricing" class="tool-view active">
+
+            <div class="flex flex-col lg:flex-row gap-6">
+
+                <!-- LEFT: Cost Structure -->
+                <div class="lg:w-1/2">
+                    <div class="glass-card rounded-3xl p-6 md:p-8 shadow-xl hover-lift">
+                        <div class="flex items-center gap-2 mb-6 pb-2 border-b border-gray-100">
+                            <span class="material-symbols-outlined text-[#070b56] text-2xl">edit_note</span>
+                            <h2 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Cost Structure</h2>
+                        </div>
+
+                        <!-- Currency Selector for Pricing -->
+                        <div class="mb-5 flex items-end gap-4 flex-wrap">
+                            <div>
+                                <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                                    <span class="material-symbols-outlined text-sm">currency_exchange</span>
+                                    Currency
+                                </label>
+                                <select id="pricingCurrency"
+                                class="px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                                <option value="USD">USD ($)</option>
+                                <option value="NGN">NGN (₦)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="EUR">EUR (€)</option>
+                            </select>
+                        </div>
                     </div>
-                    <span class="text-[8px] text-white/30 font-mono">LIVE</span>
-                </div>
-                
-                <div class="text-center mb-6">
-                    <p class="text-white/40 text-[10px] uppercase tracking-wider mb-2">Recommended Price</p>
-                    <div id="recommendedPrice" class="text-6xl font-black text-white tracking-tighter drop-shadow-lg">—</div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4 mb-6">
-                    <div class="result-glass rounded-2xl p-4 text-center">
-                        <span class="material-symbols-outlined text-white/40 text-lg">payments</span>
-                        <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Profit Per Unit</p>
-                        <div id="profitPerUnit" class="text-xl font-black text-[#4ade80] mt-1">—</div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Product Cost -->
+                        <div class="group">
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-sm">inventory_2</span>
+                                Product Cost
+                            </label>
+                            <div class="input-group-icon">
+                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <input type="number" id="productCost" value="" step="0.01" min="0" placeholder="0.00"
+                                class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Shipping Cost -->
+                        <div class="group">
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-sm">local_shipping</span>
+                                Shipping Cost
+                            </label>
+                            <div class="input-group-icon">
+                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <input type="number" id="shippingCost" value="" step="0.01" min="0" placeholder="0.00"
+                                class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Ad Spend / Unit -->
+                        <div class="group">
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-sm">ads_click</span>
+                                Ad Spend / Unit
+                            </label>
+                            <div class="input-group-icon">
+                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <input type="number" id="adSpend" value="" step="0.01" min="0" placeholder="0.00"
+                                class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Transaction Fee -->
+                        <div class="group">
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-sm">credit_card</span>
+                                Transaction Fee
+                            </label>
+                            <div class="flex gap-2">
+                                <div class="input-group-icon flex-1">
+                                    <input type="number" id="feePercent" value="" step="0.1" min="0" placeholder="0.0"
+                                    class="w-full px-3 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
+                                    <span class="suffix">%</span>
+                                </div>
+                                <div class="input-group-icon w-28">
+                                    <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                    <input type="number" id="fixedFee" value="" step="0.01" min="0" placeholder="0.00"
+                                    class="w-full pl-7 pr-2 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
+                                </div>
+                            </div>
+                            <p class="text-[8px] text-gray-400 mt-1 font-medium">% of total costs + fixed fee</p>
+                        </div>
                     </div>
-                    <div class="result-glass rounded-2xl p-4 text-center">
-                        <span class="material-symbols-outlined text-white/40 text-lg">pie_chart</span>
-                        <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Your Margin</p>
-                        <div id="actualMargin" class="text-xl font-black text-white mt-1">—</div>
+
+                    <!-- Margin Slider -->
+                    <div class="mt-8 pt-2">
+                        <div class="flex justify-between items-end mb-3">
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">target</span>
+                                Desired Profit Margin
+                            </label>
+                            <div class="flex items-baseline gap-1">
+                                <span id="marginPercent" class="text-3xl font-black text-[#070b56]">40</span>
+                                <span class="text-lg font-bold text-[#070b56]">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="marginSlider" min="10" max="70" value="40" step="1" class="w-full">
+                        <div class="flex justify-between mt-2 text-[10px] font-black text-gray-400 tracking-wider">
+                            <span>10%</span>
+                            <span>30%</span>
+                            <span>50%</span>
+                            <span>70%</span>
+                        </div>
+                    </div>
+
+                    <!-- Wake Hint -->
+                    <div id="wakeHint" class="mt-6 py-3 rounded-2xl bg-gradient-to-r from-[#ffd800]/10 to-transparent">
+                        <div class="flex items-center justify-center gap-2 text-xs font-bold text-[#070b56]">
+                            <span class="material-symbols-outlined text-base">touch_app</span>
+                            Enter your costs, then move the slider to calculate your price.
+                        </div>
                     </div>
                 </div>
-                
-                <div class="flex gap-3">
-                    <button id="copyBtn" class="flex-1 bg-[#ffd800] text-[#070b56] py-3.5 rounded-2xl font-black text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl">
-                        <span class="material-symbols-outlined text-base">content_copy</span>
-                        COPY PRICE
-                    </button>
-                    <button id="resetBtn" class="px-6 py-3.5 rounded-2xl border-2 border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all hover:border-white/40">
-                        RESET
-                    </button>
-                </div>
-                <div id="copyFeedback" class="text-center mt-3 text-white/60 text-xs opacity-0 pointer-events-none"></div>
-                
-                <!-- Email Capture Section -->
-                <div class="mt-6 pt-4 border-t border-white/20">
-                    <p class="text-white/60 text-[10px] uppercase tracking-wider mb-3 text-center">
-                        Get profit insights & early access to clarity
-                    </p>
-                    <div class="flex gap-2">
-                        <input type="email" id="captureEmail" placeholder="Your email address" 
-                               class="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-2 text-white text-sm placeholder-white/40 focus:outline-none focus:border-[#ffd800]">
-                        <button id="captureBtn" 
-                                class="bg-[#ffd800] text-[#070b56] px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition-all">
-                            Subscribe
+            </div>
+
+            <!-- RIGHT: Results -->
+            <div class="lg:w-1/2 space-y-5">
+
+                <!-- Results Card -->
+                <div class="bg-gradient-to-br from-[#070b56] to-[#070b56] rounded-3xl p-6 shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[#ffd800] text-xl">analytics</span>
+                            <h2 class="text-[10px] font-black tracking-[0.2em] text-[#ffd800]/80 uppercase">Your Results</h2>
+                        </div>
+                        <span class="text-[8px] text-white/30 font-mono">LIVE</span>
+                    </div>
+
+                    <div class="text-center mb-6">
+                        <p class="text-white/40 text-[10px] uppercase tracking-wider mb-2">Recommended Price</p>
+                        <div id="recommendedPrice" class="text-6xl font-black text-white tracking-tighter drop-shadow-lg">—</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="result-glass rounded-2xl p-4 text-center">
+                            <span class="material-symbols-outlined text-white/40 text-lg">payments</span>
+                            <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Profit Per Unit</p>
+                            <div id="profitPerUnit" class="text-xl font-black text-[#4ade80] mt-1">—</div>
+                        </div>
+                        <div class="result-glass rounded-2xl p-4 text-center">
+                            <span class="material-symbols-outlined text-white/40 text-lg">pie_chart</span>
+                            <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Your Margin</p>
+                            <div id="actualMargin" class="text-xl font-black text-white mt-1">—</div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button id="copyBtn" class="flex-1 bg-[#ffd800] text-[#070b56] py-3.5 rounded-2xl font-black text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl">
+                            <span class="material-symbols-outlined text-base">content_copy</span>
+                            COPY PRICE
+                        </button>
+                        <button id="resetBtn" class="px-6 py-3.5 rounded-2xl border-2 border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all hover:border-white/40">
+                            RESET
                         </button>
                     </div>
-                    <div id="captureFeedback" class="text-center mt-2 text-xs opacity-0 transition-opacity"></div>
+                    <div id="copyFeedback" class="text-center mt-3 text-white/60 text-xs opacity-0 pointer-events-none transition-opacity"></div>
                 </div>
-            </div>
 
-            <!-- UltraGrace Card -->
-            <div class="bg-[#070b56] rounded-2xl p-5 border border-white/20 hover:bg-[#070b56] transition-all">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-[#ffd800] to-[#ffed4a] rounded-2xl flex items-center justify-center shadow-lg">
-                        <span class="material-symbols-outlined text-[#070b56] text-2xl" data-weight="fill">insights</span>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-black text-lg tracking-tight">UltraGrace</h3>
-                        <p class="text-[#ffd800]/70 text-[8px] uppercase tracking-wider font-bold">Decision Intelligence Platform</p>
-                    </div>
-                </div>
-                <p class="text-white text-sm leading-relaxed">
-                    Clarity for your store. Control for your growth. Unify Shopify, QuickBooks, and ad platforms into one source of truth. Get AI-powered insights that tell you exactly what to do next.
-                </p>
-                <button id="exploreBtn" class="w-full mt-4 bg-[#ffd800] text-[#070b56] py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all group">
-                    Explore UltraGrace
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </button>
-            </div>
-
-            <!-- GOD'S GRACE ULTRA Card -->
-            <div class="bg-[#070b56] rounded-2xl p-5 border border-white/20 hover:bg-[#070b56] transition-all">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-[#ffd800] to-[#ffed4a] rounded-2xl flex items-center justify-center shadow-lg">
-                        <span class="material-symbols-outlined text-[#070b56] text-2xl">support_agent</span>
-                    </div>
-                    <div>
-                        <h3 class="text-white font-black text-lg tracking-tight">GOD'S GRACE ULTRA</h3>
-                        <p class="text-[#ffd800]/70 text-[8px] uppercase tracking-wider font-bold">Expert Consulting</p>
-                    </div>
-                </div>
-                <p class="text-white text-sm leading-relaxed">
-                    Need personalized business guidance? Expert consulting to help you make data-driven decisions, optimize pricing, and grow profits.
-                </p>
-                <button id="consultBtn" class="w-full mt-4 bg-transparent border-2 border-[#ffd800] text-[#ffd800] py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2 hover:bg-[#ffd800] hover:text-[#070b56] transition-all group">
-                    Schedule a Consultation
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">calendar_month</span>
-                </button>
+                <!-- UltraGrace, GGU cards and email capture removed per requirements -->
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-5 bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-auto">
-        <div class="text-[9px] font-black text-[#070b56] tracking-[0.2em] uppercase">
-            Powered by GOD'S GRACE ULTRA • All rights reserved. • Clarity In Motion
+    <!-- ============================================================ -->
+    <!--  TOOL 2 : BUSINESS HEALTH  (starts empty)                    -->
+    <!-- ============================================================ -->
+    <section id="view-health" class="tool-view">
+
+        <!-- Header -->
+        <div class="mb-6">
+            <h2 class="text-2xl md:text-3xl font-black text-[#070b56] flex items-center gap-2">
+                <span class="material-symbols-outlined text-3xl">monitoring</span>
+                Business Health
+            </h2>
+            <p class="text-gray-500 font-medium mt-1">See beyond the headline numbers.</p>
         </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        // Supabase configuration (same as your waitlist page)
-        const SUPABASE_URL = 'https://ufioxikrnewoprjuaune.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmaW94aWtybmV3b3ByanVhdW5lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1NDMwODksImV4cCI6MjA4ODExOTA4OX0.tbe7EP8dWesUIXaLPuS3FmcZL1MFNTt4cPkBeIjiqw8';
-        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-        
-        // Get slider fill working
-        const slider = document.getElementById('marginSlider');
-        
-        function updateSliderFill() {
-            const val = slider.value;
-            const percent = (val - 10) / 60 * 100;
-            slider.style.setProperty('--fill', percent + '%');
+        <!-- Inputs -->
+        <div class="glass-card rounded-3xl p-6 md:p-8 shadow-xl mb-6">
+            <div class="flex items-center gap-2 mb-5 pb-2 border-b border-gray-100">
+                <span class="material-symbols-outlined text-[#070b56] text-2xl">inputs</span>
+                <h3 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Enter your business data</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Revenue -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">payments</span>
+                        Revenue
+                    </label>
+                    <div class="input-group-icon">
+                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <input type="number" id="bhRevenue" value="" step="100" min="0" placeholder="e.g. 1000000"
+                        class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <!-- Total Expenses -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">receipt_long</span>
+                        Total Expenses
+                    </label>
+                    <div class="input-group-icon">
+                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <input type="number" id="bhExpenses" value="" step="100" min="0" placeholder="e.g. 400000"
+                        class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                    </div>
+                    <p class="text-[8px] text-gray-400 mt-1 font-medium">Include COGS if already counted.</p>
+                </div>
+
+                <!-- COGS -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">inventory</span>
+                        COGS
+                    </label>
+                    <div class="input-group-icon">
+                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <input type="number" id="bhCogs" value="" step="100" min="0" placeholder="e.g. 200000"
+                        class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                    </div>
+                    <p class="text-[8px] text-gray-400 mt-1 font-medium">Cost of Goods Sold (if not in Expenses).</p>
+                </div>
+
+                <!-- Ad Spend -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">ads_click</span>
+                        Ad Spend
+                    </label>
+                    <div class="input-group-icon">
+                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <input type="number" id="bhAdSpend" value="" step="100" min="0" placeholder="e.g. 100000"
+                        class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <!-- Orders -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">shopping_cart</span>
+                        Orders
+                    </label>
+                    <input type="number" id="bhOrders" value="" step="1" min="0" placeholder="e.g. 100"
+                    class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                </div>
+
+                <!-- Customers -->
+                <div>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                        <span class="material-symbols-outlined text-sm">groups</span>
+                        Customers
+                    </label>
+                    <input type="number" id="bhCustomers" value="" step="1" min="0" placeholder="e.g. 50"
+                    class="w-full px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                </div>
+
+                <!-- Currency Selector -->
+                <div class="sm:col-span-2 lg:col-span-3 flex items-end gap-4 flex-wrap">
+                    <div>
+                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
+                            <span class="material-symbols-outlined text-sm">currency_exchange</span>
+                            Currency
+                        </label>
+                        <select id="bhCurrency"
+                        class="px-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
+                        <option value="USD">USD ($)</option>
+                        <option value="NGN">NGN (₦)</option>
+                        <option value="GBP">GBP (£)</option>
+                        <option value="EUR">EUR (€)</option>
+                    </select>
+                </div>
+                <button id="bhCalculateBtn"
+                class="bg-[#070b56] text-white px-8 py-3 rounded-2xl font-black text-sm hover:bg-[#0a0f6a] transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                <span class="material-symbols-outlined text-base">refresh</span>
+                Calculate
+            </button>
+            <button id="bhResetBtn"
+            class="px-6 py-3 rounded-2xl border-2 border-gray-300 text-[#070b56] font-bold text-sm hover:bg-gray-100 transition-all">
+            Reset
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Overview Metrics -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <div class="metric-card highlight">
+        <div class="label">
+            <span class="material-symbols-outlined">trending_up</span>
+            Profit
+        </div>
+        <div id="bhProfit" class="value">—</div>
+    </div>
+    <div class="metric-card highlight">
+        <div class="label">
+            <span class="material-symbols-outlined">percent</span>
+            Profit Margin
+        </div>
+        <div id="bhMargin" class="value">—</div>
+    </div>
+    <div class="metric-card">
+        <div class="label">
+            <span class="material-symbols-outlined">payments</span>
+            Revenue
+        </div>
+        <div id="bhRevenueDisplay" class="value">—</div>
+    </div>
+    <div class="metric-card">
+        <div class="label">
+            <span class="material-symbols-outlined">account_balance</span>
+            Expense Ratio
+        </div>
+        <div id="bhExpenseRatio" class="value">—</div>
+    </div>
+</div>
+
+<!-- Charts -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+    <!-- Revenue vs Expenses -->
+    <div class="chart-box">
+        <h4>
+            <span class="material-symbols-outlined">bar_chart</span>
+            Revenue vs Expenses
+        </h4>
+        <canvas id="chartRevExp"></canvas>
+    </div>
+    <!-- Profit Breakdown (donut) -->
+    <div class="chart-box">
+        <h4>
+            <span class="material-symbols-outlined">donut_large</span>
+            Profit Breakdown
+        </h4>
+        <canvas id="chartBreakdown"></canvas>
+    </div>
+</div>
+
+<!-- Marketing Efficiency + Secondary Metrics -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <!-- ROAS -->
+    <div class="chart-box lg:col-span-1">
+        <h4>
+            <span class="material-symbols-outlined">campaign</span>
+            Marketing Efficiency
+        </h4>
+        <div class="flex items-baseline gap-2 mt-1">
+            <span id="bhRoasValue" class="text-2xl font-black text-[#070b56]">—</span>
+            <span class="text-sm font-bold text-gray-400">ROAS</span>
+        </div>
+        <div class="roas-bar-track">
+            <div id="bhRoasBar" class="roas-bar-fill" style="width:0%;"></div>
+        </div>
+        <div class="flex justify-between text-[9px] font-bold text-gray-400 mt-1">
+            <span>0x</span>
+            <span id="bhRoasLabel">—</span>
+        </div>
+    </div>
+
+    <!-- AOV -->
+    <div class="metric-card lg:col-span-1">
+        <div class="label">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            AOV
+        </div>
+        <div id="bhAov" class="value">—</div>
+        <p class="text-[10px] text-gray-400 font-medium mt-1">Average Order Value</p>
+    </div>
+
+    <!-- CAC -->
+    <div class="metric-card lg:col-span-1">
+        <div class="label">
+            <span class="material-symbols-outlined">group_add</span>
+            CAC
+        </div>
+        <div id="bhCac" class="value">—</div>
+        <p class="text-[10px] text-gray-400 font-medium mt-1">Customer Acquisition Cost</p>
+    </div>
+</div>
+
+<!-- COGS Ratio + Business Health Interpretation -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="metric-card lg:col-span-1">
+        <div class="label">
+            <span class="material-symbols-outlined">inventory</span>
+            COGS Ratio
+        </div>
+        <div id="bhCogsRatio" class="value">—</div>
+        <p class="text-[10px] text-gray-400 font-medium mt-1">COGS as % of Revenue</p>
+    </div>
+
+    <div class="health-interp lg:col-span-2">
+        <div class="flex items-center gap-3 flex-wrap">
+            <span class="material-symbols-outlined text-[#070b56] text-2xl">info</span>
+            <h4 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Business Health</h4>
+            <span id="bhHealthBadge" class="badge warning">Awaiting data</span>
+        </div>
+        <ul id="bhHealthInsights">
+            <li><span class="material-symbols-outlined">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+</section>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer class="text-center py-5 bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-auto">
+    <div class="text-[9px] font-black text-[#070b56] tracking-[0.2em] uppercase">
+        LucraGrace &bull; Built by Victor Ademola &bull; All rights reserved. &bull; Clarity In Motion
+    </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                                       -->
+<!-- ════════════════════════════════════════════════════════════════════ -->
+<script>
+    (function() {
+        'use strict';
+
+        // ────────────────────────────────────────────────
+        // 1. TOOL SWITCHER
+        // ────────────────────────────────────────────────
+        const switcherBtns = document.querySelectorAll('.tool-switcher button');
+        const views = {
+            pricing: document.getElementById('view-pricing'),
+            health: document.getElementById('view-health')
+        };
+
+        function switchTool(tool) {
+            switcherBtns.forEach(btn => {
+                const isActive = btn.dataset.tool === tool;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+            Object.keys(views).forEach(key => {
+                views[key].classList.toggle('active', key === tool);
+            });
+            if (tool === 'health') {
+                setTimeout(() => {
+                    if (window.healthCharts) {
+                        Object.values(window.healthCharts).forEach(chart => {
+                            if (chart && chart.resize) chart.resize();
+                        });
+                    }
+                }, 100);
+            }
         }
-        
-        slider.addEventListener('input', updateSliderFill);
-        updateSliderFill();
-        
+
+        switcherBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                switchTool(this.dataset.tool);
+            });
+        });
+
+        // ────────────────────────────────────────────────
+        // 2. PRICING CALCULATOR (empty start + currency)
+        // ────────────────────────────────────────────────
         const productCost = document.getElementById('productCost');
         const shippingCost = document.getElementById('shippingCost');
         const adSpend = document.getElementById('adSpend');
@@ -453,20 +885,33 @@
         const copyBtn = document.getElementById('copyBtn');
         const resetBtn = document.getElementById('resetBtn');
         const copyFeedback = document.getElementById('copyFeedback');
-        const exploreBtn = document.getElementById('exploreBtn');
-        const consultBtn = document.getElementById('consultBtn');
         const wakeHint = document.getElementById('wakeHint');
-        const captureEmail = document.getElementById('captureEmail');
-        const captureBtn = document.getElementById('captureBtn');
-        const captureFeedback = document.getElementById('captureFeedback');
-        
+        const pricingCurrency = document.getElementById('pricingCurrency');
+
         let isAwakened = false;
-        
+
+        const CURRENCY_SYMBOLS = {
+            USD: '$',
+            NGN: '₦',
+            GBP: '£',
+            EUR: '€'
+        };
+
+        function getPricingCurrencySymbol() {
+            return CURRENCY_SYMBOLS[pricingCurrency.value] || '$';
+        }
+
+        function formatPricingCurrency(amount) {
+            const symbol = getPricingCurrencySymbol();
+            if (amount === undefined || amount === null || !isFinite(amount)) return symbol + '—';
+            return symbol + Number(amount).toFixed(2);
+        }
+
         function getNumber(el, defaultValue = 0) {
-            let val = parseFloat(el.value);
+            const val = parseFloat(el.value);
             return isNaN(val) ? defaultValue : val;
         }
-        
+
         function calculatePrice() {
             const cost = getNumber(productCost, 0);
             const shipping = getNumber(shippingCost, 0);
@@ -474,44 +919,42 @@
             const feePct = getNumber(feePercent, 0) / 100;
             const feeFixed = getNumber(fixedFee, 0);
             const desiredMargin = getNumber(marginSlider, 40) / 100;
-            
+
             const totalCosts = cost + shipping + ad;
             const feeAmount = (totalCosts * feePct) + feeFixed;
             const trueCost = totalCosts + feeAmount;
-            
+
             let price = 0;
             let profit = 0;
             let actualMargin = 0;
-            
+
             if (desiredMargin < 1 && trueCost > 0) {
                 price = trueCost / (1 - desiredMargin);
                 profit = price - trueCost;
                 actualMargin = profit / price;
             }
-            
+
             return { price, profit, margin: actualMargin, trueCost };
         }
-        
-        function updateResults() {
+
+        function updatePricingResults() {
             const results = calculatePrice();
-            
+
             if (!isAwakened) {
                 recommendedPriceEl.textContent = '—';
                 profitPerUnitEl.textContent = '—';
                 actualMarginEl.textContent = '—';
                 return;
             }
-            
-            if (results.price > 0 && results.trueCost > 0) {
-                recommendedPriceEl.textContent = '$' + results.price.toFixed(2);
-                profitPerUnitEl.textContent = '$' + results.profit.toFixed(2);
-                
-                if (results.profit >= 0) {
-                    profitPerUnitEl.className = "text-xl font-black text-[#4ade80] mt-1";
-                } else {
-                    profitPerUnitEl.className = "text-xl font-black text-red-400 mt-1";
-                }
-                
+
+            const hasAllCosts = getNumber(productCost, 0) > 0 || getNumber(shippingCost, 0) > 0 || getNumber(adSpend, 0) >
+                0;
+
+            if (results.price > 0 && results.trueCost > 0 && hasAllCosts) {
+                recommendedPriceEl.textContent = formatPricingCurrency(results.price);
+                profitPerUnitEl.textContent = formatPricingCurrency(results.profit);
+                profitPerUnitEl.className = 'text-xl font-black mt-1 ' +
+                    (results.profit >= 0 ? 'text-[#4ade80]' : 'text-red-400');
                 actualMarginEl.textContent = (results.margin * 100).toFixed(1) + '%';
             } else {
                 recommendedPriceEl.textContent = '—';
@@ -519,149 +962,517 @@
                 actualMarginEl.textContent = '—';
             }
         }
-        
+
         function awaken() {
             if (!isAwakened) {
                 isAwakened = true;
-                wakeHint.style.opacity = '0';
-                wakeHint.style.visibility = 'hidden';
-                updateResults();
+                wakeHint.classList.add('hidden');
+                updatePricingResults();
             }
         }
-        
+
         function updateSliderDisplay() {
             marginPercent.textContent = marginSlider.value;
-            updateSliderFill();
-            if (isAwakened) updateResults();
+            const val = marginSlider.value;
+            const percent = (val - 10) / 60 * 100;
+            marginSlider.style.setProperty('--fill', percent + '%');
+            if (isAwakened) updatePricingResults();
         }
-        
-        function resetAll() {
-            productCost.value = '20.00';
-            shippingCost.value = '5.00';
-            adSpend.value = '10.00';
-            feePercent.value = '2.9';
-            fixedFee.value = '0.30';
+
+        function resetPricing() {
+            productCost.value = '';
+            shippingCost.value = '';
+            adSpend.value = '';
+            feePercent.value = '';
+            fixedFee.value = '';
             marginSlider.value = '40';
-            marginPercent.textContent = '40%';
-            updateSliderFill();
-            
+            updateSliderDisplay();
+
             isAwakened = false;
-            wakeHint.style.opacity = '1';
-            wakeHint.style.visibility = 'visible';
-            
+            wakeHint.classList.remove('hidden');
+
             recommendedPriceEl.textContent = '—';
             profitPerUnitEl.textContent = '—';
             actualMarginEl.textContent = '—';
         }
-        
+
         function copyPrice() {
             if (!isAwakened) {
-                copyFeedback.textContent = '✧ Move slider first to calculate a price ✧';
+                copyFeedback.textContent = 'Enter your costs, then move the slider';
                 copyFeedback.style.opacity = '1';
                 setTimeout(() => { copyFeedback.style.opacity = '0'; }, 2000);
                 return;
             }
-            
             const results = calculatePrice();
-            if (results.price > 0) {
-                const priceText = '$' + results.price.toFixed(2);
+            const hasAllCosts = getNumber(productCost, 0) > 0 || getNumber(shippingCost, 0) > 0 || getNumber(adSpend, 0) >
+                0;
+            if (results.price > 0 && hasAllCosts) {
+                const priceText = formatPricingCurrency(results.price);
                 navigator.clipboard.writeText(priceText).then(() => {
-                    copyFeedback.textContent = '✓ Copied ' + priceText + ' ✓';
+                    copyFeedback.textContent = 'Copied ' + priceText;
                     copyFeedback.style.opacity = '1';
                     setTimeout(() => { copyFeedback.style.opacity = '0'; }, 2000);
                 }).catch(() => {
-                    copyFeedback.textContent = '✗ Failed to copy ✗';
+                    copyFeedback.textContent = 'Failed to copy';
                     copyFeedback.style.opacity = '1';
                     setTimeout(() => { copyFeedback.style.opacity = '0'; }, 2000);
                 });
             } else {
-                copyFeedback.textContent = '✧ Enter valid costs first ✧';
+                copyFeedback.textContent = 'Enter your costs first';
                 copyFeedback.style.opacity = '1';
                 setTimeout(() => { copyFeedback.style.opacity = '0'; }, 2000);
             }
         }
-        
-        // Email capture to Supabase (same table as waitlist)
-        captureBtn.addEventListener('click', async function() {
-            const email = captureEmail.value.trim();
-            
-            if (!email) {
-                captureFeedback.textContent = 'Please enter your email';
-                captureFeedback.style.color = '#ffd800';
-                captureFeedback.style.opacity = '1';
-                setTimeout(() => { captureFeedback.style.opacity = '0'; }, 2000);
-                return;
-            }
-            
-            if (!email.includes('@') || !email.includes('.')) {
-                captureFeedback.textContent = 'Enter a valid email address';
-                captureFeedback.style.color = '#ffd800';
-                captureFeedback.style.opacity = '1';
-                setTimeout(() => { captureFeedback.style.opacity = '0'; }, 2000);
-                return;
-            }
-            
-            captureBtn.disabled = true;
-            captureBtn.textContent = 'SENDING...';
-            
-            try {
-                const { error } = await _supabase
-                    .from('waitlist_leads')
-                    .insert([{
-                        email: email,
-                        full_name: 'LucraGrace User',
-                        store_url: 'from_lucragrace',
-                        source: 'lucragrace_calculator',
-                        email_confirmed: false,
-                        status: 'pending'
-                    }]);
-                
-                if (error && error.code === '23505') {
-                    captureFeedback.textContent = '✓ Already subscribed! Check your inbox.';
-                    captureFeedback.style.color = '#4ade80';
-                    captureFeedback.style.opacity = '1';
-                    captureEmail.value = '';
-                } else if (error) {
-                    throw new Error(error.message);
-                } else {
-                    captureFeedback.textContent = '✓ Subscribed! Check your inbox for weekly tips.';
-                    captureFeedback.style.color = '#4ade80';
-                    captureFeedback.style.opacity = '1';
-                    captureEmail.value = '';
-                }
-            } catch (err) {
-                console.error('Subscription error:', err);
-                captureFeedback.textContent = '⚠️ Unable to subscribe. Please try again.';
-                captureFeedback.style.color = '#ffd800';
-                captureFeedback.style.opacity = '1';
-            }
-            
-            captureBtn.disabled = false;
-            captureBtn.textContent = 'Subscribe';
-            setTimeout(() => { captureFeedback.style.opacity = '0'; }, 3000);
-        });
-        
+
+        // Update currency prefix in pricing inputs
+        function updatePricingCurrencyPrefixes() {
+            const symbol = getPricingCurrencySymbol();
+            document.querySelectorAll('.currency-prefix-pricing').forEach(el => {
+                el.textContent = symbol;
+            });
+            // Re-run results with new currency formatting
+            if (isAwakened) updatePricingResults();
+        }
+
+        // Pricing event listeners
         marginSlider.addEventListener('input', function() {
             updateSliderDisplay();
-            awaken();
+            // Only awaken if at least one cost field has a value
+            const hasCost = getNumber(productCost, 0) > 0 || getNumber(shippingCost, 0) > 0 || getNumber(adSpend, 0) > 0;
+            if (hasCost) {
+                awaken();
+            } else {
+                // If no costs, keep showing "—"
+                if (isAwakened) {
+                    isAwakened = false;
+                    wakeHint.classList.remove('hidden');
+                    recommendedPriceEl.textContent = '—';
+                    profitPerUnitEl.textContent = '—';
+                    actualMarginEl.textContent = '—';
+                }
+            }
         });
-        
-        function addUpdateListeners() {
-            const inputs = [productCost, shippingCost, adSpend, feePercent, fixedFee];
-            inputs.forEach(input => {
-                input.addEventListener('input', function() {
-                    if (isAwakened) updateResults();
-                });
+
+        [productCost, shippingCost, adSpend, feePercent, fixedFee].forEach(input => {
+            input.addEventListener('input', function() {
+                const hasCost = getNumber(productCost, 0) > 0 || getNumber(shippingCost, 0) > 0 || getNumber(
+                    adSpend, 0) > 0;
+                if (hasCost && isAwakened) {
+                    updatePricingResults();
+                } else if (hasCost) {
+                    // If there's cost but not awakened, awaken
+                    awaken();
+                } else {
+                    // No costs, reset to idle
+                    if (isAwakened) {
+                        isAwakened = false;
+                        wakeHint.classList.remove('hidden');
+                        recommendedPriceEl.textContent = '—';
+                        profitPerUnitEl.textContent = '—';
+                        actualMarginEl.textContent = '—';
+                    }
+                }
+            });
+        });
+
+        pricingCurrency.addEventListener('change', function() {
+            updatePricingCurrencyPrefixes();
+            if (isAwakened) updatePricingResults();
+        });
+
+        copyBtn.addEventListener('click', copyPrice);
+        resetBtn.addEventListener('click', resetPricing);
+
+        // init pricing slider fill
+        updateSliderDisplay();
+        updatePricingCurrencyPrefixes();
+
+        // ────────────────────────────────────────────────
+        // 3. BUSINESS HEALTH (starts empty)
+        // ────────────────────────────────────────────────
+        const bhRevenue = document.getElementById('bhRevenue');
+        const bhExpenses = document.getElementById('bhExpenses');
+        const bhCogs = document.getElementById('bhCogs');
+        const bhAdSpend = document.getElementById('bhAdSpend');
+        const bhOrders = document.getElementById('bhOrders');
+        const bhCustomers = document.getElementById('bhCustomers');
+        const bhCurrency = document.getElementById('bhCurrency');
+        const bhCalcBtn = document.getElementById('bhCalculateBtn');
+        const bhResetBtn = document.getElementById('bhResetBtn');
+
+        const bhProfit = document.getElementById('bhProfit');
+        const bhMargin = document.getElementById('bhMargin');
+        const bhRevenueDisplay = document.getElementById('bhRevenueDisplay');
+        const bhExpenseRatio = document.getElementById('bhExpenseRatio');
+        const bhAov = document.getElementById('bhAov');
+        const bhCac = document.getElementById('bhCac');
+        const bhRoasValue = document.getElementById('bhRoasValue');
+        const bhRoasBar = document.getElementById('bhRoasBar');
+        const bhRoasLabel = document.getElementById('bhRoasLabel');
+        const bhCogsRatio = document.getElementById('bhCogsRatio');
+        const bhHealthBadge = document.getElementById('bhHealthBadge');
+        const bhHealthInsights = document.getElementById('bhHealthInsights');
+
+        // Chart refs
+        let chartRevExp = null;
+        let chartBreakdown = null;
+        window.healthCharts = {};
+
+        function getBhCurrencySymbol() {
+            return CURRENCY_SYMBOLS[bhCurrency.value] || '$';
+        }
+
+        function formatBhCurrency(amount) {
+            const symbol = getBhCurrencySymbol();
+            if (amount === undefined || amount === null || !isFinite(amount)) return symbol + '—';
+            return symbol + Number(amount).toLocaleString('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
             });
         }
-        
-        copyBtn.addEventListener('click', copyPrice);
-        resetBtn.addEventListener('click', resetAll);
-        exploreBtn.addEventListener('click', () => window.open('https://waitlist.ultragracehq.com', '_blank'));
-        consultBtn.addEventListener('click', () => window.open('https://calendly.com/godsgraceultra', '_blank'));
-        
-        addUpdateListeners();
-        updateSliderDisplay();
-    </script>
+
+        function formatPercent(value) {
+            if (value === undefined || value === null || !isFinite(value)) return '—';
+            return value.toFixed(1) + '%';
+        }
+
+        function getBhNumber(el, defaultValue = 0) {
+            const val = parseFloat(el.value);
+            if (el.value.trim() === '') return defaultValue;
+            return isNaN(val) || val < 0 ? defaultValue : val;
+        }
+
+        function computeBusinessHealth() {
+            const revenue = getBhNumber(bhRevenue, 0);
+            const expenses = getBhNumber(bhExpenses, 0);
+            const cogs = getBhNumber(bhCogs, 0);
+            const adSpend = getBhNumber(bhAdSpend, 0);
+            const orders = getBhNumber(bhOrders, 0);
+            const customers = getBhNumber(bhCustomers, 0);
+
+            const profit = revenue - expenses;
+            const profitMargin = revenue > 0 ? (profit / revenue) * 100 : 0;
+            const expenseRatio = revenue > 0 ? (expenses / revenue) * 100 : 0;
+            const aov = orders > 0 ? revenue / orders : 0;
+            const cac = customers > 0 ? adSpend / customers : 0;
+            const roas = adSpend > 0 ? revenue / adSpend : 0;
+            const cogsRatio = revenue > 0 ? (cogs / revenue) * 100 : 0;
+
+            return {
+                revenue,
+                expenses,
+                cogs,
+                adSpend,
+                orders,
+                customers,
+                profit,
+                profitMargin,
+                expenseRatio,
+                aov,
+                cac,
+                roas,
+                cogsRatio
+            };
+        }
+
+        function updateBusinessHealth() {
+            const d = computeBusinessHealth();
+
+            function setMetric(el, value, isCurrency = false) {
+                if (isCurrency) {
+                    el.textContent = formatBhCurrency(value);
+                } else {
+                    el.textContent = formatPercent(value);
+                }
+                el.classList.remove('positive', 'negative');
+                if (value > 0) el.classList.add('positive');
+                else if (value < 0) el.classList.add('negative');
+            }
+
+            setMetric(bhProfit, d.profit, true);
+            setMetric(bhMargin, d.profitMargin, false);
+            setMetric(bhRevenueDisplay, d.revenue, true);
+            setMetric(bhExpenseRatio, d.expenseRatio, false);
+            setMetric(bhAov, d.aov, true);
+            setMetric(bhCac, d.cac, true);
+            setMetric(bhCogsRatio, d.cogsRatio, false);
+
+            // ROAS
+            if (d.adSpend > 0 && d.revenue > 0) {
+                bhRoasValue.textContent = d.roas.toFixed(1) + 'x';
+                const pct = Math.min(d.roas / 20 * 100, 100);
+                bhRoasBar.style.width = pct + '%';
+                bhRoasLabel.textContent = d.roas.toFixed(1) + 'x return';
+            } else if (d.adSpend === 0 && d.revenue > 0) {
+                bhRoasValue.textContent = '∞';
+                bhRoasBar.style.width = '100%';
+                bhRoasLabel.textContent = 'No ad spend';
+            } else {
+                bhRoasValue.textContent = '—';
+                bhRoasBar.style.width = '0%';
+                bhRoasLabel.textContent = 'Enter revenue & ad spend';
+            }
+
+            // ── Health interpretation ──
+            const insights = [];
+            let badgeText = 'Awaiting data';
+            let badgeClass = 'warning';
+
+            if (d.revenue > 0 || d.expenses > 0) {
+                if (d.profit > 0) {
+                    badgeText = 'Profitable';
+                    badgeClass = 'healthy';
+                    insights.push({ icon: 'check_circle', text: 'Your business is generating positive profit.' });
+                } else if (d.profit < 0) {
+                    badgeText = 'Loss-making';
+                    badgeClass = 'danger';
+                    insights.push({ icon: 'warning', text: 'Your expenses exceed revenue. Review costs and pricing.' });
+                } else {
+                    badgeText = 'Break-even';
+                    badgeClass = 'warning';
+                    insights.push({ icon: 'info', text: 'Revenue equals expenses. Look for margin opportunities.' });
+                }
+
+                if (d.profitMargin > 20) {
+                    insights.push({ icon: 'trending_up', text: 'Healthy margin — your unit economics are strong.' });
+                } else if (d.profitMargin > 0 && d.profitMargin <= 20) {
+                    insights.push({ icon: 'trending_down', text: 'Margin needs attention. Consider raising prices or reducing costs.' });
+                } else if (d.profitMargin <= 0 && d.revenue > 0) {
+                    insights.push({ icon: 'warning', text: 'Negative margin — immediate action required.' });
+                }
+
+                if (d.expenseRatio > 70) {
+                    insights.push({ icon: 'account_balance', text: 'Expenses are consuming a large share of revenue. Look for efficiency gains.' });
+                } else if (d.expenseRatio > 50 && d.expenseRatio <= 70) {
+                    insights.push({ icon: 'account_balance', text: 'Expense ratio is moderate. Room for improvement.' });
+                } else if (d.expenseRatio <= 50 && d.expenseRatio > 0) {
+                    insights.push({ icon: 'check_circle', text: 'Expense ratio is well-controlled.' });
+                }
+
+                if (d.roas > 4) {
+                    insights.push({ icon: 'campaign', text: 'Advertising is generating strong returns.' });
+                } else if (d.roas > 2 && d.roas <= 4) {
+                    insights.push({ icon: 'campaign', text: 'Advertising efficiency is acceptable but could improve.' });
+                } else if (d.roas > 0 && d.roas <= 2) {
+                    insights.push({ icon: 'warning', text: 'Advertising efficiency needs attention.' });
+                }
+
+                if (d.cogsRatio > 40) {
+                    insights.push({ icon: 'inventory', text: 'COGS is high relative to revenue. Review supplier pricing.' });
+                } else if (d.cogsRatio > 25 && d.cogsRatio <= 40) {
+                    insights.push({ icon: 'inventory', text: 'COGS ratio is moderate. Monitor closely.' });
+                } else if (d.cogsRatio <= 25 && d.cogsRatio > 0) {
+                    insights.push({ icon: 'check_circle', text: 'COGS is well-managed.' });
+                }
+
+                const unique = [];
+                const seen = new Set();
+                for (const item of insights) {
+                    if (!seen.has(item.text)) {
+                        seen.add(item.text);
+                        unique.push(item);
+                    }
+                }
+                const finalInsights = unique.slice(0, 5);
+
+                bhHealthBadge.textContent = badgeText;
+                bhHealthBadge.className = 'badge ' + badgeClass;
+
+                bhHealthInsights.innerHTML = finalInsights.map(item =>
+                    '<li><span class="material-symbols-outlined">' + item.icon + '</span> ' + item.text + '</li>'
+                ).join('');
+
+            } else {
+                bhHealthBadge.textContent = 'Awaiting data';
+                bhHealthBadge.className = 'badge warning';
+                bhHealthInsights.innerHTML =
+                    '<li><span class="material-symbols-outlined">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>';
+            }
+
+            updateBhCharts(d);
+        }
+
+        // ── Charts ──
+        function updateBhCharts(d) {
+            const symbol = getBhCurrencySymbol();
+
+            if (chartRevExp) {
+                chartRevExp.destroy();
+                chartRevExp = null;
+            }
+            const ctx1 = document.getElementById('chartRevExp').getContext('2d');
+            chartRevExp = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Revenue', 'Expenses'],
+                    datasets: [{
+                        label: 'Amount',
+                        data: [d.revenue, d.expenses],
+                        backgroundColor: ['#070b56', '#f59e0b'],
+                        borderRadius: 6,
+                        barPercentage: 0.5,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return symbol + ctx.raw.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return symbol + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            if (chartBreakdown) {
+                chartBreakdown.destroy();
+                chartBreakdown = null;
+            }
+            const ctx2 = document.getElementById('chartBreakdown').getContext('2d');
+            const profitVal = Math.max(d.profit, 0);
+            const expenseVal = d.expenses;
+            const total = profitVal + expenseVal;
+
+            chartBreakdown = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Profit', 'Expenses'],
+                    datasets: [{
+                        data: [profitVal, expenseVal],
+                        backgroundColor: ['#16a34a', '#f59e0b'],
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    cutout: '65%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { family: 'Manrope', weight: '700', size: 10 },
+                                color: '#1e293b',
+                                padding: 12,
+                                usePointStyle: true,
+                                pointStyle: 'circle',
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                    const pct = total > 0 ? (ctx.raw / total * 100).toFixed(1) : 0;
+                                    return ctx.label + ': ' + symbol + ctx.raw.toLocaleString() +
+                                        ' (' + pct + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            window.healthCharts = { chartRevExp, chartBreakdown };
+        }
+
+        // ── Business Health event listeners ──
+        function runHealth() {
+            updateBusinessHealth();
+        }
+
+        bhCalcBtn.addEventListener('click', runHealth);
+
+        bhResetBtn.addEventListener('click', function() {
+            bhRevenue.value = '';
+            bhExpenses.value = '';
+            bhCogs.value = '';
+            bhAdSpend.value = '';
+            bhOrders.value = '';
+            bhCustomers.value = '';
+            bhCurrency.value = 'USD';
+            updateBhCurrencyPrefixes();
+            runHealth();
+        });
+
+        let healthTimeout = null;
+        const healthInputs = [bhRevenue, bhExpenses, bhCogs, bhAdSpend, bhOrders, bhCustomers];
+        healthInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                clearTimeout(healthTimeout);
+                healthTimeout = setTimeout(runHealth, 300);
+            });
+        });
+
+        bhCurrency.addEventListener('change', function() {
+            updateBhCurrencyPrefixes();
+            runHealth();
+        });
+
+        function updateBhCurrencyPrefixes() {
+            const symbol = getBhCurrencySymbol();
+            document.querySelectorAll('.currency-prefix').forEach(el => {
+                el.textContent = symbol;
+            });
+        }
+
+        updateBhCurrencyPrefixes();
+        runHealth();
+
+        // ────────────────────────────────────────────────
+        // 4. HANDLE RESIZE FOR CHARTS
+        // ────────────────────────────────────────────────
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (window.healthCharts) {
+                    Object.values(window.healthCharts).forEach(chart => {
+                        if (chart && chart.resize) chart.resize();
+                    });
+                }
+            }, 200);
+        });
+
+        // ────────────────────────────────────────────────
+        // 5. KEYBOARD SHORTCUT: switch tools with 1/2
+        // ────────────────────────────────────────────────
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                const target = document.activeElement;
+                if (target && (target.tagName === 'INPUT' || target.tagName === 'SELECT' || target.tagName ===
+                        'TEXTAREA')) return;
+                switchTool('pricing');
+                e.preventDefault();
+            } else if (e.key === '2' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                const target = document.activeElement;
+                if (target && (target.tagName === 'INPUT' || target.tagName === 'SELECT' || target.tagName ===
+                        'TEXTAREA')) return;
+                switchTool('health');
+                e.preventDefault();
+            }
+        });
+
+        window.switchTool = switchTool;
+
+        console.log('LucraGrace loaded. Tools: Pricing Calculator (1) | Business Health (2)');
+
+    })();
+</script>
+
 </body>
 </html>
