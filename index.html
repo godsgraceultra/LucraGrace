@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LucraGrace – Pricing &amp; Business Health</title>
 
-    <!-- Google Fonts -->
+    <!-- ─── PRIMARY SEO ─── -->
+    <title>LucraGrace — Pricing &amp; Business Health Calculator</title>
+    <meta name="description" content="Calculate profitable product prices and understand your business health with LucraGrace. Analyze profit, margins, expenses, AOV, CAC and ROAS." />
+    <meta name="keywords" content="pricing calculator, product pricing calculator, profit margin calculator, business health calculator, business metrics calculator, CAC calculator, ROAS calculator, AOV calculator, profit calculator, LucraGrace" />
+    <meta name="author" content="Victor Ademola" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://lucragrace.com/" />
+
+    <!-- ─── OPEN GRAPH ─── -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LucraGrace — Pricing &amp; Business Health Calculator" />
+    <meta property="og:description" content="Calculate profitable product prices and understand your business health with LucraGrace. Analyze profit, margins, expenses, AOV, CAC and ROAS." />
+    <meta property="og:url" content="https://lucragrace.com/" />
+    <meta property="og:site_name" content="LucraGrace" />
+    <meta property="og:image" content="https://lucragrace.com/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ─── TWITTER / X ─── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LucraGrace — Pricing &amp; Business Health Calculator" />
+    <meta name="twitter:description" content="Calculate profitable product prices and understand your business health with LucraGrace. Analyze profit, margins, expenses, AOV, CAC and ROAS." />
+    <meta name="twitter:image" content="https://lucragrace.com/og-preview.png" />
+    <meta name="twitter:creator" content="@vaademola" />
+
+    <!-- ─── STRUCTURED DATA (JSON‑LD) ─── -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "LucraGrace",
+            "description": "Calculate profitable product prices and understand your business health. Analyze profit, margins, expenses, AOV, CAC and ROAS.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Victor Ademola",
+                "url": "https://x.com/vaademola",
+                "sameAs": [
+                    "https://x.com/vaademola",
+                    "https://www.instagram.com/vaademola",
+                    "https://www.linkedin.com/in/victor-ademola-8b6211288"
+                ]
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "Victor Ademola"
+            },
+            "url": "https://lucragrace.com/",
+            "featureList": "Pricing calculator, profit margin, business health metrics, AOV, CAC, ROAS, expense ratio, COGS ratio"
+        }
+    </script>
+
+    <!-- ─── FONTS & STYLES ─── -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
 
@@ -370,6 +428,24 @@
             transition: width 0.3s ease;
             width: 0%;
         }
+
+        /* ── Footer social links ── */
+        .footer-social a {
+            color: rgba(7, 11, 86, 0.5);
+            transition: color 0.2s ease;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 0.04em;
+        }
+        .footer-social a:hover {
+            color: #070b56;
+        }
+        .footer-social .sep {
+            color: rgba(7, 11, 86, 0.2);
+            font-weight: 300;
+            padding: 0 4px;
+        }
     </style>
 </head>
 <body>
@@ -378,33 +454,34 @@
     <header class="glass-card shadow-sm flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-b border-gray-100 flex-shrink-0">
         <div class="flex items-center gap-3">
             <div>
-                <div class="text-2xl md:text-3xl font-black tracking-tighter">
+                <h1 class="text-2xl md:text-3xl font-black tracking-tighter">
                     <span class="text-[#070b56]">Lucra</span><span class="text-[#ffd800] drop-shadow-sm">Grace</span>
-                </div>
+                </h1>
                 <p class="text-xs text-gray-500 font-medium hidden sm:block">Great things begin where clarity meets action.</p>
             </div>
         </div>
 
-        <!-- Tool Switcher -->
-        <div class="tool-switcher" role="group" aria-label="Tool switcher">
+        <!-- Tool Switcher (nav) -->
+        <nav class="tool-switcher" role="group" aria-label="Tool switcher">
             <button class="active" data-tool="pricing" aria-pressed="true">
-                <span class="material-symbols-outlined">calculate</span>
+                <span class="material-symbols-outlined" aria-hidden="true">calculate</span>
                 Pricing Calculator
             </button>
             <button data-tool="health" aria-pressed="false">
-                <span class="material-symbols-outlined">monitoring</span>
+                <span class="material-symbols-outlined" aria-hidden="true">monitoring</span>
                 Business Health
             </button>
-        </div>
+        </nav>
     </header>
 
     <!-- ─── MAIN ─── -->
     <main class="flex-1 max-w-7xl mx-auto w-full p-4 md:p-6 lg:p-8">
 
         <!-- ============================================================ -->
-        <!--  TOOL 1 : PRICING CALCULATOR (empty start + currency)        -->
+        <!--  TOOL 1 : PRICING CALCULATOR                                 -->
         <!-- ============================================================ -->
-        <section id="view-pricing" class="tool-view active">
+        <section id="view-pricing" class="tool-view active" aria-labelledby="pricing-heading">
+            <h2 id="pricing-heading" class="sr-only">Pricing Calculator</h2>
 
             <div class="flex flex-col lg:flex-row gap-6">
 
@@ -412,15 +489,15 @@
                 <div class="lg:w-1/2">
                     <div class="glass-card rounded-3xl p-6 md:p-8 shadow-xl hover-lift">
                         <div class="flex items-center gap-2 mb-6 pb-2 border-b border-gray-100">
-                            <span class="material-symbols-outlined text-[#070b56] text-2xl">edit_note</span>
-                            <h2 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Cost Structure</h2>
+                            <span class="material-symbols-outlined text-[#070b56] text-2xl" aria-hidden="true">edit_note</span>
+                            <h3 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Cost Structure</h3>
                         </div>
 
                         <!-- Currency Selector for Pricing -->
                         <div class="mb-5 flex items-end gap-4 flex-wrap">
                             <div>
-                                <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                                    <span class="material-symbols-outlined text-sm">currency_exchange</span>
+                                <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="pricingCurrency">
+                                    <span class="material-symbols-outlined text-sm" aria-hidden="true">currency_exchange</span>
                                     Currency
                                 </label>
                                 <select id="pricingCurrency"
@@ -436,12 +513,12 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <!-- Product Cost -->
                         <div class="group">
-                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                                <span class="material-symbols-outlined text-sm">inventory_2</span>
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="productCost">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">inventory_2</span>
                                 Product Cost
                             </label>
                             <div class="input-group-icon">
-                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <span class="prefix currency-prefix-pricing" data-currency="USD" aria-hidden="true">$</span>
                                 <input type="number" id="productCost" value="" step="0.01" min="0" placeholder="0.00"
                                 class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                             </div>
@@ -449,12 +526,12 @@
 
                         <!-- Shipping Cost -->
                         <div class="group">
-                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                                <span class="material-symbols-outlined text-sm">local_shipping</span>
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="shippingCost">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">local_shipping</span>
                                 Shipping Cost
                             </label>
                             <div class="input-group-icon">
-                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <span class="prefix currency-prefix-pricing" data-currency="USD" aria-hidden="true">$</span>
                                 <input type="number" id="shippingCost" value="" step="0.01" min="0" placeholder="0.00"
                                 class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                             </div>
@@ -462,12 +539,12 @@
 
                         <!-- Ad Spend / Unit -->
                         <div class="group">
-                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                                <span class="material-symbols-outlined text-sm">ads_click</span>
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="adSpend">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">ads_click</span>
                                 Ad Spend / Unit
                             </label>
                             <div class="input-group-icon">
-                                <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                <span class="prefix currency-prefix-pricing" data-currency="USD" aria-hidden="true">$</span>
                                 <input type="number" id="adSpend" value="" step="0.01" min="0" placeholder="0.00"
                                 class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                             </div>
@@ -475,18 +552,18 @@
 
                         <!-- Transaction Fee -->
                         <div class="group">
-                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                                <span class="material-symbols-outlined text-sm">credit_card</span>
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="feePercent">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">credit_card</span>
                                 Transaction Fee
                             </label>
                             <div class="flex gap-2">
                                 <div class="input-group-icon flex-1">
                                     <input type="number" id="feePercent" value="" step="0.1" min="0" placeholder="0.0"
                                     class="w-full px-3 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
-                                    <span class="suffix">%</span>
+                                    <span class="suffix" aria-hidden="true">%</span>
                                 </div>
                                 <div class="input-group-icon w-28">
-                                    <span class="prefix currency-prefix-pricing" data-currency="USD">$</span>
+                                    <span class="prefix currency-prefix-pricing" data-currency="USD" aria-hidden="true">$</span>
                                     <input type="number" id="fixedFee" value="" step="0.01" min="0" placeholder="0.00"
                                     class="w-full pl-7 pr-2 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-center text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800]">
                                 </div>
@@ -498,8 +575,8 @@
                     <!-- Margin Slider -->
                     <div class="mt-8 pt-2">
                         <div class="flex justify-between items-end mb-3">
-                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1">
-                                <span class="material-symbols-outlined text-sm">target</span>
+                            <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1" for="marginSlider">
+                                <span class="material-symbols-outlined text-sm" aria-hidden="true">target</span>
                                 Desired Profit Margin
                             </label>
                             <div class="flex items-baseline gap-1">
@@ -519,7 +596,7 @@
                     <!-- Wake Hint -->
                     <div id="wakeHint" class="mt-6 py-3 rounded-2xl bg-gradient-to-r from-[#ffd800]/10 to-transparent">
                         <div class="flex items-center justify-center gap-2 text-xs font-bold text-[#070b56]">
-                            <span class="material-symbols-outlined text-base">touch_app</span>
+                            <span class="material-symbols-outlined text-base" aria-hidden="true">touch_app</span>
                             Enter your costs, then move the slider to calculate your price.
                         </div>
                     </div>
@@ -533,8 +610,8 @@
                 <div class="bg-gradient-to-br from-[#070b56] to-[#070b56] rounded-3xl p-6 shadow-2xl">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-[#ffd800] text-xl">analytics</span>
-                            <h2 class="text-[10px] font-black tracking-[0.2em] text-[#ffd800]/80 uppercase">Your Results</h2>
+                            <span class="material-symbols-outlined text-[#ffd800] text-xl" aria-hidden="true">analytics</span>
+                            <h3 class="text-[10px] font-black tracking-[0.2em] text-[#ffd800]/80 uppercase">Your Results</h3>
                         </div>
                         <span class="text-[8px] text-white/30 font-mono">LIVE</span>
                     </div>
@@ -546,12 +623,12 @@
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="result-glass rounded-2xl p-4 text-center">
-                            <span class="material-symbols-outlined text-white/40 text-lg">payments</span>
+                            <span class="material-symbols-outlined text-white/40 text-lg" aria-hidden="true">payments</span>
                             <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Profit Per Unit</p>
                             <div id="profitPerUnit" class="text-xl font-black text-[#4ade80] mt-1">—</div>
                         </div>
                         <div class="result-glass rounded-2xl p-4 text-center">
-                            <span class="material-symbols-outlined text-white/40 text-lg">pie_chart</span>
+                            <span class="material-symbols-outlined text-white/40 text-lg" aria-hidden="true">pie_chart</span>
                             <p class="text-white/40 text-[8px] uppercase tracking-wider mt-1">Your Margin</p>
                             <div id="actualMargin" class="text-xl font-black text-white mt-1">—</div>
                         </div>
@@ -559,7 +636,7 @@
 
                     <div class="flex gap-3">
                         <button id="copyBtn" class="flex-1 bg-[#ffd800] text-[#070b56] py-3.5 rounded-2xl font-black text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl">
-                            <span class="material-symbols-outlined text-base">content_copy</span>
+                            <span class="material-symbols-outlined text-base" aria-hidden="true">content_copy</span>
                             COPY PRICE
                         </button>
                         <button id="resetBtn" class="px-6 py-3.5 rounded-2xl border-2 border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all hover:border-white/40">
@@ -575,23 +652,24 @@
     </section>
 
     <!-- ============================================================ -->
-    <!--  TOOL 2 : BUSINESS HEALTH  (starts empty)                    -->
+    <!--  TOOL 2 : BUSINESS HEALTH                                     -->
     <!-- ============================================================ -->
-    <section id="view-health" class="tool-view">
+    <section id="view-health" class="tool-view" aria-labelledby="health-heading">
+        <h2 id="health-heading" class="sr-only">Business Health</h2>
 
         <!-- Header -->
         <div class="mb-6">
-            <h2 class="text-2xl md:text-3xl font-black text-[#070b56] flex items-center gap-2">
-                <span class="material-symbols-outlined text-3xl">monitoring</span>
+            <div class="text-2xl md:text-3xl font-black text-[#070b56] flex items-center gap-2">
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">monitoring</span>
                 Business Health
-            </h2>
+            </div>
             <p class="text-gray-500 font-medium mt-1">See beyond the headline numbers.</p>
         </div>
 
         <!-- Inputs -->
         <div class="glass-card rounded-3xl p-6 md:p-8 shadow-xl mb-6">
             <div class="flex items-center gap-2 mb-5 pb-2 border-b border-gray-100">
-                <span class="material-symbols-outlined text-[#070b56] text-2xl">inputs</span>
+                <span class="material-symbols-outlined text-[#070b56] text-2xl" aria-hidden="true">inputs</span>
                 <h3 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Enter your business data</h3>
             </div>
 
@@ -599,12 +677,12 @@
 
                 <!-- Revenue -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">payments</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhRevenue">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">payments</span>
                         Revenue
                     </label>
                     <div class="input-group-icon">
-                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <span class="prefix currency-prefix" data-currency="USD" aria-hidden="true">$</span>
                         <input type="number" id="bhRevenue" value="" step="100" min="0" placeholder="e.g. 1000000"
                         class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                     </div>
@@ -612,12 +690,12 @@
 
                 <!-- Total Expenses -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">receipt_long</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhExpenses">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">receipt_long</span>
                         Total Expenses
                     </label>
                     <div class="input-group-icon">
-                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <span class="prefix currency-prefix" data-currency="USD" aria-hidden="true">$</span>
                         <input type="number" id="bhExpenses" value="" step="100" min="0" placeholder="e.g. 400000"
                         class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                     </div>
@@ -626,12 +704,12 @@
 
                 <!-- COGS -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">inventory</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhCogs">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">inventory</span>
                         COGS
                     </label>
                     <div class="input-group-icon">
-                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <span class="prefix currency-prefix" data-currency="USD" aria-hidden="true">$</span>
                         <input type="number" id="bhCogs" value="" step="100" min="0" placeholder="e.g. 200000"
                         class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                     </div>
@@ -640,12 +718,12 @@
 
                 <!-- Ad Spend -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">ads_click</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhAdSpend">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">ads_click</span>
                         Ad Spend
                     </label>
                     <div class="input-group-icon">
-                        <span class="prefix currency-prefix" data-currency="USD">$</span>
+                        <span class="prefix currency-prefix" data-currency="USD" aria-hidden="true">$</span>
                         <input type="number" id="bhAdSpend" value="" step="100" min="0" placeholder="e.g. 100000"
                         class="w-full pl-8 pr-4 py-3 bg-gray-50/80 border border-gray-200 rounded-2xl font-bold text-lg text-[#070b56] focus:outline-none focus:ring-2 focus:ring-[#ffd800] focus:border-transparent transition-all">
                     </div>
@@ -653,8 +731,8 @@
 
                 <!-- Orders -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">shopping_cart</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhOrders">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">shopping_cart</span>
                         Orders
                     </label>
                     <input type="number" id="bhOrders" value="" step="1" min="0" placeholder="e.g. 100"
@@ -663,8 +741,8 @@
 
                 <!-- Customers -->
                 <div>
-                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                        <span class="material-symbols-outlined text-sm">groups</span>
+                    <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhCustomers">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">groups</span>
                         Customers
                     </label>
                     <input type="number" id="bhCustomers" value="" step="1" min="0" placeholder="e.g. 50"
@@ -674,8 +752,8 @@
                 <!-- Currency Selector -->
                 <div class="sm:col-span-2 lg:col-span-3 flex items-end gap-4 flex-wrap">
                     <div>
-                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1">
-                            <span class="material-symbols-outlined text-sm">currency_exchange</span>
+                        <label class="text-[10px] font-black text-[#070b56]/70 uppercase tracking-wider flex items-center gap-1 mb-1" for="bhCurrency">
+                            <span class="material-symbols-outlined text-sm" aria-hidden="true">currency_exchange</span>
                             Currency
                         </label>
                         <select id="bhCurrency"
@@ -688,7 +766,7 @@
                 </div>
                 <button id="bhCalculateBtn"
                 class="bg-[#070b56] text-white px-8 py-3 rounded-2xl font-black text-sm hover:bg-[#0a0f6a] transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
-                <span class="material-symbols-outlined text-base">refresh</span>
+                <span class="material-symbols-outlined text-base" aria-hidden="true">refresh</span>
                 Calculate
             </button>
             <button id="bhResetBtn"
@@ -703,28 +781,28 @@
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
     <div class="metric-card highlight">
         <div class="label">
-            <span class="material-symbols-outlined">trending_up</span>
+            <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
             Profit
         </div>
         <div id="bhProfit" class="value">—</div>
     </div>
     <div class="metric-card highlight">
         <div class="label">
-            <span class="material-symbols-outlined">percent</span>
+            <span class="material-symbols-outlined" aria-hidden="true">percent</span>
             Profit Margin
         </div>
         <div id="bhMargin" class="value">—</div>
     </div>
     <div class="metric-card">
         <div class="label">
-            <span class="material-symbols-outlined">payments</span>
+            <span class="material-symbols-outlined" aria-hidden="true">payments</span>
             Revenue
         </div>
         <div id="bhRevenueDisplay" class="value">—</div>
     </div>
     <div class="metric-card">
         <div class="label">
-            <span class="material-symbols-outlined">account_balance</span>
+            <span class="material-symbols-outlined" aria-hidden="true">account_balance</span>
             Expense Ratio
         </div>
         <div id="bhExpenseRatio" class="value">—</div>
@@ -736,18 +814,18 @@
     <!-- Revenue vs Expenses -->
     <div class="chart-box">
         <h4>
-            <span class="material-symbols-outlined">bar_chart</span>
+            <span class="material-symbols-outlined" aria-hidden="true">bar_chart</span>
             Revenue vs Expenses
         </h4>
-        <canvas id="chartRevExp"></canvas>
+        <canvas id="chartRevExp" aria-label="Bar chart comparing revenue and expenses"></canvas>
     </div>
     <!-- Profit Breakdown (donut) -->
     <div class="chart-box">
         <h4>
-            <span class="material-symbols-outlined">donut_large</span>
+            <span class="material-symbols-outlined" aria-hidden="true">donut_large</span>
             Profit Breakdown
         </h4>
-        <canvas id="chartBreakdown"></canvas>
+        <canvas id="chartBreakdown" aria-label="Donut chart showing profit vs expenses breakdown"></canvas>
     </div>
 </div>
 
@@ -756,7 +834,7 @@
     <!-- ROAS -->
     <div class="chart-box lg:col-span-1">
         <h4>
-            <span class="material-symbols-outlined">campaign</span>
+            <span class="material-symbols-outlined" aria-hidden="true">campaign</span>
             Marketing Efficiency
         </h4>
         <div class="flex items-baseline gap-2 mt-1">
@@ -775,7 +853,7 @@
     <!-- AOV -->
     <div class="metric-card lg:col-span-1">
         <div class="label">
-            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
             AOV
         </div>
         <div id="bhAov" class="value">—</div>
@@ -785,7 +863,7 @@
     <!-- CAC -->
     <div class="metric-card lg:col-span-1">
         <div class="label">
-            <span class="material-symbols-outlined">group_add</span>
+            <span class="material-symbols-outlined" aria-hidden="true">group_add</span>
             CAC
         </div>
         <div id="bhCac" class="value">—</div>
@@ -797,7 +875,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
     <div class="metric-card lg:col-span-1">
         <div class="label">
-            <span class="material-symbols-outlined">inventory</span>
+            <span class="material-symbols-outlined" aria-hidden="true">inventory</span>
             COGS Ratio
         </div>
         <div id="bhCogsRatio" class="value">—</div>
@@ -806,12 +884,12 @@
 
     <div class="health-interp lg:col-span-2">
         <div class="flex items-center gap-3 flex-wrap">
-            <span class="material-symbols-outlined text-[#070b56] text-2xl">info</span>
+            <span class="material-symbols-outlined text-[#070b56] text-2xl" aria-hidden="true">info</span>
             <h4 class="text-xs font-black text-[#070b56] uppercase tracking-wider">Business Health</h4>
             <span id="bhHealthBadge" class="badge warning">Awaiting data</span>
         </div>
         <ul id="bhHealthInsights">
-            <li><span class="material-symbols-outlined">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>
         </ul>
     </div>
 </div>
@@ -824,6 +902,13 @@
 <footer class="text-center py-5 bg-white/80 backdrop-blur-sm border-t border-gray-200 mt-auto">
     <div class="text-[9px] font-black text-[#070b56] tracking-[0.2em] uppercase">
         LucraGrace &bull; Built by Victor Ademola &bull; All rights reserved. &bull; Clarity In Motion
+    </div>
+    <div class="footer-social mt-2 flex items-center justify-center gap-1 flex-wrap text-[10px] font-medium">
+        <a href="https://x.com/vaademola" target="_blank" rel="noopener noreferrer" aria-label="Victor Ademola on X (Twitter)">X</a>
+        <span class="sep">•</span>
+        <a href="https://www.instagram.com/vaademola" target="_blank" rel="noopener noreferrer" aria-label="Victor Ademola on Instagram">Instagram</a>
+        <span class="sep">•</span>
+        <a href="https://www.linkedin.com/in/victor-ademola-8b6211288" target="_blank" rel="noopener noreferrer" aria-label="Victor Ademola on LinkedIn">LinkedIn</a>
     </div>
 </footer>
 
@@ -870,7 +955,7 @@
         });
 
         // ────────────────────────────────────────────────
-        // 2. PRICING CALCULATOR (empty start + currency)
+        // 2. PRICING CALCULATOR
         // ────────────────────────────────────────────────
         const productCost = document.getElementById('productCost');
         const shippingCost = document.getElementById('shippingCost');
@@ -1024,25 +1109,21 @@
             }
         }
 
-        // Update currency prefix in pricing inputs
         function updatePricingCurrencyPrefixes() {
             const symbol = getPricingCurrencySymbol();
             document.querySelectorAll('.currency-prefix-pricing').forEach(el => {
                 el.textContent = symbol;
             });
-            // Re-run results with new currency formatting
             if (isAwakened) updatePricingResults();
         }
 
         // Pricing event listeners
         marginSlider.addEventListener('input', function() {
             updateSliderDisplay();
-            // Only awaken if at least one cost field has a value
             const hasCost = getNumber(productCost, 0) > 0 || getNumber(shippingCost, 0) > 0 || getNumber(adSpend, 0) > 0;
             if (hasCost) {
                 awaken();
             } else {
-                // If no costs, keep showing "—"
                 if (isAwakened) {
                     isAwakened = false;
                     wakeHint.classList.remove('hidden');
@@ -1060,10 +1141,8 @@
                 if (hasCost && isAwakened) {
                     updatePricingResults();
                 } else if (hasCost) {
-                    // If there's cost but not awakened, awaken
                     awaken();
                 } else {
-                    // No costs, reset to idle
                     if (isAwakened) {
                         isAwakened = false;
                         wakeHint.classList.remove('hidden');
@@ -1083,12 +1162,11 @@
         copyBtn.addEventListener('click', copyPrice);
         resetBtn.addEventListener('click', resetPricing);
 
-        // init pricing slider fill
         updateSliderDisplay();
         updatePricingCurrencyPrefixes();
 
         // ────────────────────────────────────────────────
-        // 3. BUSINESS HEALTH (starts empty)
+        // 3. BUSINESS HEALTH
         // ────────────────────────────────────────────────
         const bhRevenue = document.getElementById('bhRevenue');
         const bhExpenses = document.getElementById('bhExpenses');
@@ -1113,7 +1191,6 @@
         const bhHealthBadge = document.getElementById('bhHealthBadge');
         const bhHealthInsights = document.getElementById('bhHealthInsights');
 
-        // Chart refs
         let chartRevExp = null;
         let chartBreakdown = null;
         window.healthCharts = {};
@@ -1197,7 +1274,6 @@
             setMetric(bhCac, d.cac, true);
             setMetric(bhCogsRatio, d.cogsRatio, false);
 
-            // ROAS
             if (d.adSpend > 0 && d.revenue > 0) {
                 bhRoasValue.textContent = d.roas.toFixed(1) + 'x';
                 const pct = Math.min(d.roas / 20 * 100, 100);
@@ -1213,7 +1289,6 @@
                 bhRoasLabel.textContent = 'Enter revenue & ad spend';
             }
 
-            // ── Health interpretation ──
             const insights = [];
             let badgeText = 'Awaiting data';
             let badgeClass = 'warning';
@@ -1279,20 +1354,20 @@
                 bhHealthBadge.className = 'badge ' + badgeClass;
 
                 bhHealthInsights.innerHTML = finalInsights.map(item =>
-                    '<li><span class="material-symbols-outlined">' + item.icon + '</span> ' + item.text + '</li>'
+                    '<li><span class="material-symbols-outlined" aria-hidden="true">' + item.icon + '</span> ' + item
+                    .text + '</li>'
                 ).join('');
 
             } else {
                 bhHealthBadge.textContent = 'Awaiting data';
                 bhHealthBadge.className = 'badge warning';
                 bhHealthInsights.innerHTML =
-                    '<li><span class="material-symbols-outlined">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>';
+                    '<li><span class="material-symbols-outlined" aria-hidden="true">info</span> Enter your numbers above and click <strong>Calculate</strong>.</li>';
             }
 
             updateBhCharts(d);
         }
 
-        // ── Charts ──
         function updateBhCharts(d) {
             const symbol = getBhCurrencySymbol();
 
@@ -1390,7 +1465,6 @@
             window.healthCharts = { chartRevExp, chartBreakdown };
         }
 
-        // ── Business Health event listeners ──
         function runHealth() {
             updateBusinessHealth();
         }
@@ -1434,7 +1508,7 @@
         runHealth();
 
         // ────────────────────────────────────────────────
-        // 4. HANDLE RESIZE FOR CHARTS
+        // 4. RESIZE CHARTS
         // ────────────────────────────────────────────────
         let resizeTimer;
         window.addEventListener('resize', function() {
@@ -1449,7 +1523,7 @@
         });
 
         // ────────────────────────────────────────────────
-        // 5. KEYBOARD SHORTCUT: switch tools with 1/2
+        // 5. KEYBOARD SHORTCUTS
         // ────────────────────────────────────────────────
         document.addEventListener('keydown', function(e) {
             if (e.key === '1' && !e.ctrlKey && !e.metaKey && !e.altKey) {
